@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>c8272f3d-085b-42b5-8daa-38686dfdbac7</UserSecretsId>
+    <TypeScriptToolsVersion>2.6</TypeScriptToolsVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.3" />
+    <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="angular-app\src\app\components\" />
+    <Folder Include="angular-app\src\app\directives\" />
+    <Folder Include="angular-app\src\app\guards\" />
+    <Folder Include="angular-app\src\app\models\" />
+    <Folder Include="angular-app\src\app\services\" />
+    <Folder Include="angular-app\src\app\pipes\" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoTrader.DTO\CryptoTrader.DTO.csproj" />
+    <ProjectReference Include="..\CryptoTrader.EntityDomain\CryptoTrader.EntityDomain.csproj" />
+    <ProjectReference Include="..\CryptoTrader.EntityFramework\CryptoTrader.EntityFramework.csproj" />
+    <ProjectReference Include="..\CryptoTrader.Services\CryptoTrader.Services.csproj" />
+  </ItemGroup>
+
+</Project>

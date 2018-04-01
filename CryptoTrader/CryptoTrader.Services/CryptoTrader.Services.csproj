@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoTrader.EntityDomain\CryptoTrader.EntityDomain.csproj" />
+    <ProjectReference Include="..\CryptoTrader.EntityFramework\CryptoTrader.EntityFramework.csproj" />
+  </ItemGroup>
+
 </Project>

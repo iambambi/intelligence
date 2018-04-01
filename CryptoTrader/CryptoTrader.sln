@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2005
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.Web", "CryptoTrader\CryptoTrader.Web.csproj", "{C628FFA5-8A62-4D8C-A087-7A6B6E31BA34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.EntityFramework", "CryptoTrader.EntityFramework\CryptoTrader.EntityFramework.csproj", "{E78E9612-C8B2-48A7-B46C-4F5E6F43B800}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTrader.EntityFramework", "CryptoTrader.EntityFramework\CryptoTrader.EntityFramework.csproj", "{E78E9612-C8B2-48A7-B46C-4F5E6F43B800}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.EntityDomain", "CryptoTrader.EntityDomain\CryptoTrader.EntityDomain.csproj", "{473D36F1-4408-41A9-BFE5-85DAAF07BB5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTrader.EntityDomain", "CryptoTrader.EntityDomain\CryptoTrader.EntityDomain.csproj", "{473D36F1-4408-41A9-BFE5-85DAAF07BB5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.DTO", "CryptoTrader.DTO\CryptoTrader.DTO.csproj", "{B46E5821-FB65-4496-B60F-3F8E12ED36D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTrader.DTO", "CryptoTrader.DTO\CryptoTrader.DTO.csproj", "{B46E5821-FB65-4496-B60F-3F8E12ED36D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.Services", "CryptoTrader.Services\CryptoTrader.Services.csproj", "{8314E81B-1226-43EF-81D5-316C7AAEB625}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTrader.Services", "CryptoTrader.Services\CryptoTrader.Services.csproj", "{8314E81B-1226-43EF-81D5-316C7AAEB625}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.Tests", "CryptoTrader.Tests\CryptoTrader.Tests.csproj", "{6C8699DD-1C2D-4227-9E3D-7A118F55B586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoTrader.Tests", "CryptoTrader.Tests\CryptoTrader.Tests.csproj", "{6C8699DD-1C2D-4227-9E3D-7A118F55B586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.Web", "CryptoTrader.Web\CryptoTrader.Web.csproj", "{4C424FC2-2535-4B8E-8717-B332264ADC9E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C628FFA5-8A62-4D8C-A087-7A6B6E31BA34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C628FFA5-8A62-4D8C-A087-7A6B6E31BA34}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C628FFA5-8A62-4D8C-A087-7A6B6E31BA34}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C628FFA5-8A62-4D8C-A087-7A6B6E31BA34}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E78E9612-C8B2-48A7-B46C-4F5E6F43B800}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E78E9612-C8B2-48A7-B46C-4F5E6F43B800}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E78E9612-C8B2-48A7-B46C-4F5E6F43B800}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{6C8699DD-1C2D-4227-9E3D-7A118F55B586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C8699DD-1C2D-4227-9E3D-7A118F55B586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C8699DD-1C2D-4227-9E3D-7A118F55B586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C424FC2-2535-4B8E-8717-B332264ADC9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C424FC2-2535-4B8E-8717-B332264ADC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C424FC2-2535-4B8E-8717-B332264ADC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C424FC2-2535-4B8E-8717-B332264ADC9E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
