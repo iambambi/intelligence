@@ -1,6 +1,38 @@
-<div>
-  <input type="text" [(ngModel)]="purchase.Symbol" />
-  <input type="number" [(ngModel)]="purchase.Amount" />
-  <button (click)="reset()">Reset</button>
-  <button (click)="trade()">Trade</button>
+<div class="row">
+  <div class="12">
+    <form method="post" action="#">
+      <div>
+        <div class="row">
+          <div class="6u 12u(mobile)">
+            <input type="text" [(ngModel)]="purchase.Symbol" name="CryptoName" id="CryptoName" placeholder="CryptoName" />
+          </div>
+          <div class="6u 12u(mobile)">
+            <input type="number" [(ngModel)]="purchase.Amount" name="Amount" id="Amount" placeholder="Amount" />
+          </div>
+        </div>
+
+        <div class="row 200%">
+          <div class="12u">
+            <ul class="actions">
+              <li><button (click)="reset()">Reset</button></li>
+              <li><button (click)="trade()">Trade</button></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
 </div>
+<div class="row">
+  <div>
+    <ul>
+      <h1>Balance</h1>
+      <li>USD: {{usd}}</li>
+      <li>BTC: {{btc}}</li>
+      <li>ETH: {{eth}}</li>
+      <li>XRP: {{xrp}}</li>
+    </ul>   
+  </div>
+</div>
+
