@@ -1,0 +1,6 @@
+<header>
+  <h3>{{cryptoCurrencyName}}</h3>
+</header>
+<div *ngIf="chart">
+  <canvas [id]="cryptoCurrencySym">{{ chart }}</canvas>
+</div>
