@@ -15,6 +15,8 @@ export class Configuration {
   public ServerWithApiUrl = `${this.Server}/api/`;
   public CryptoAPIUrl = "https://obudai-api.azurewebsites.net/api/exchange";
   public CryptoPurchaseUrl = "https://obudai-api.azurewebsites.net/api/account/purchase";
+  public CryptoResetUrl = "https://obudai-api.azurewebsites.net/api/account/reset";
+  public CryptoAccountUrl = "https://obudai-api.azurewebsites.net/api/account";
 
   private get Server(): string {
     if (window.location.host === "localhost:5000") {

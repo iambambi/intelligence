@@ -27,4 +27,12 @@ export class CryptoService {
     var jsonBodyContent = JSON.stringify(bodyContent);
     return this._http.post(this._config.CryptoPurchaseUrl, jsonBodyContent, this.options);
   }
+
+  public reset() {
+    return this._http.post(this._config.CryptoResetUrl,"", this.options);
+  }
+
+  public account() {
+    return this._http.get(this._config.CryptoAccountUrl, this.options);
+  }
 }
