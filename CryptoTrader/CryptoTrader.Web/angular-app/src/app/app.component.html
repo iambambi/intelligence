@@ -1,143 +1,130 @@
 <!DOCTYPE HTML>
 <!--
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+  Miniport by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Miniport by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <title>Miniport by HTML5 UP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	</head>
-	<body>
+</head>
+<body>
 
-		<!-- Nav -->
-			<nav id="nav">
-				<ul class="container">
-					<li><a href="#top">Top</a></li>
-					<li><a href="#work">Rates</a></li>
-					<li><a href="#contact">Contact</a></li>
-					<li></li>
-				</ul>
-			</nav>
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="container">
+      <li><a href="#top">Top</a></li>
+      <li><a href="#work">Rates</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li></li>
+    </ul>
+  </nav>
 
-		<!-- Home -->
-			<div class="wrapper style1 first">
-				<article class="container" id="top">
-					<div class="row">
-						<div class="4u 12u(mobile)">
-							<span class="image fit">
-								<div>
-									<img [src]="LOGO" />
-								</div>
-							</span>
-						</div>
-						<div class="8u 12u(mobile)">
-							<header>
-								<h1>Hi. I'm <strong>CryptoTrader</strong>.</h1>
-							</header>
-							<a href="#work" class="button big scrolly">Current rates</a>
-						</div>
-					</div>
-				</article>
-			</div>
+  <!-- Home -->
+  <div class="wrapper style1 first">
+    <article class="container" id="top">
+      <div class="row">
+        <div class="4u 12u(mobile)">
+          <span class="image fit">
+            <div>
+              <img [src]="LOGO" />
+            </div>
+          </span>
+        </div>
+        <div class="8u 12u(mobile)">
+          <header>
+            <h1>Hi. I'm <strong>CryptoTrader</strong>.</h1>
+          </header>
+          <a href="#work" class="button big scrolly">Current rates</a>
+        </div>
+      </div>
+    </article>
+  </div>
 
-		<!-- Rates -->
-			<div class="wrapper style2">
-				<article id="work">
-					<header>
-						<h2>Current rates</h2>
-					</header>
-					<div class="container">
-              <header>
-                  <h3>BITCOIN</h3>
-                </header>
-              <div *ngIf="chart">
-                  <canvas id="canvas">{{ chart }}</canvas>
-              </div>
-              <header>
-                  <h3>ETHEREUM</h3>
-                </header>
-              <div *ngIf="chart2">
-                  <canvas id="canvas2">{{ chart2 }}</canvas>
+  <!-- Rates -->
+  <div class="wrapper style2">
+    <article id="work">
+      <header>
+        <h2>Current rates</h2>
+      </header>
+      <div class="container">
+        <app-chart [cryptoCurrencySym]="'btc'" [cryptoCurrencyName]="'BITCOIN'"></app-chart>
+        <app-chart [cryptoCurrencySym]="'eth'" [cryptoCurrencyName]="'ETHEREUM'"></app-chart>
+        <app-chart [cryptoCurrencySym]="'xrp'" [cryptoCurrencyName]="'XRP'"></app-chart>
+      </div>
+    </article>
+  </div>
+
+  <app-exchange-handler></app-exchange-handler>
+
+  <!-- Contact -->
+  <div class="wrapper style4">
+    <article id="contact" class="container 75%">
+      <header>
+        <h2>Have me make stuff for you.</h2>
+        <p>Ornare nulla proin odio consequat sapien vestibulum ipsum sed lorem.</p>
+      </header>
+      <div>
+        <div class="row">
+          <div class="12">
+            <form method="post" action="#">
+              <div>
+                <div class="row">
+                  <div class="6u 12u(mobile)">
+                    <input type="text" name="name" id="name" placeholder="Name" />
+                  </div>
+                  <div class="6u 12u(mobile)">
+                    <input type="text" name="email" id="email" placeholder="Email" />
+                  </div>
                 </div>
-                <header>
-                    <h3>XRP</h3>
-                  </header>
-                <div *ngIf="chart3">
-                    <canvas id="canvas3">{{ chart3 }}</canvas>
-                  </div>	
-					</div>
-				</article>
-			</div>
-
-		
-		<!-- Contact -->
-			<div class="wrapper style4">
-				<article id="contact" class="container 75%">
-					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum sed lorem.</p>
-					</header>
-					<div>
-						<div class="row">
-							<div class="12">
-								<form method="post" action="#">
-									<div>
-										<div class="row">
-											<div class="6u 12u(mobile)">
-												<input type="text" name="name" id="name" placeholder="Name" />
-											</div>
-											<div class="6u 12u(mobile)">
-												<input type="text" name="email" id="email" placeholder="Email" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<input type="text" name="subject" id="subject" placeholder="Subject" />
-											</div>
-										</div>
-										<div class="row">
-											<div class="12u">
-												<textarea name="message" id="message" placeholder="Message"></textarea>
-											</div>
-										</div>
-										<div class="row 200%">
-											<div class="12u">
-												<ul class="actions">
-													<li><input type="submit" value="Send Message" /></li>
-													<li><input type="reset" value="Clear Form" class="alt" /></li>
-												</ul>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="row">
-							<div>
-								<hr />
-								<h3>Find me on ...</h3>
-								<ul class="social">
-									<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-									<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
-									<li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
-									<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-								</ul>
-								<hr />
-							</div>
-						</div>
-					</div>
-					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</article>
-			</div>
-	</body>
+                <div class="row">
+                  <div class="12u">
+                    <input type="text" name="subject" id="subject" placeholder="Subject" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="12u">
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                  </div>
+                </div>
+                <div class="row 200%">
+                  <div class="12u">
+                    <ul class="actions">
+                      <li><input type="submit" value="Send Message" /></li>
+                      <li><input type="reset" value="Clear Form" class="alt" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <hr />
+            <h3>Find me on ...</h3>
+            <ul class="social">
+              <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+              <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+              <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+              <li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+              <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+              <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+            </ul>
+            <hr />
+          </div>
+        </div>
+      </div>
+      <footer>
+        <ul id="copyright">
+          <li>&copy; Untitled. All rights reserved.</li>
+          <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+      </footer>
+    </article>
+  </div>
+</body>
 </html>
