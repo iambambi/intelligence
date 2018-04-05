@@ -14,6 +14,7 @@ export class ChartComponent implements OnInit {
   @Input() cryptoCurrencySym: string;
   @Input() cryptoCurrencyName: string;
   public chart: any = [];
+  public actualPrice: number;
 
   constructor(private _cryptoService: CryptoService) { }
 
@@ -21,6 +22,7 @@ export class ChartComponent implements OnInit {
     this._cryptoService.daily(this.cryptoCurrencySym)
       .subscribe(res => {
         console.log(res['symbol'])
+        this.actualPrice = res['currentRate'];
         let temp_1 = res['history']
         JSON.stringify(temp_1, null, "  ")
         let listPrice = JSON.stringify(temp_1, null, "  ").toString().split(',', 462)
@@ -31,14 +33,12 @@ export class ChartComponent implements OnInit {
         let prices = []
         let i = 0
         for (let index = tmb.length - 1; index > 0; index--) {
-
           prices.push(+tmb[index][1])
         }
         let dates = []
 
         for (let index = tmb.length - 1; index > 0; index--) {
-
-          dates.push(tmb[index][0].substring(2, 24))
+          dates.push(tmb[index][0].substring(4, 23))
         }
         this.chart = new Chart(this.cryptoCurrencySym, {
           type: 'line',
