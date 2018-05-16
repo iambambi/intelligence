@@ -18,6 +18,8 @@ export class Configuration {
   public CryptoResetUrl = "https://obudai-api.azurewebsites.net/api/account/reset";
   public CryptoAccountUrl = "https://obudai-api.azurewebsites.net/api/account";
 
+  public FacebookTokenValidatorUrl = "https://graph.facebook.com/v2.4/me/?access_token=";
+
   private get Server(): string {
     if (window.location.host === "localhost:5000") {
       return "http://localhost:5000";

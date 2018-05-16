@@ -1,14 +1,12 @@
-﻿using JetBrains.Annotations;
+﻿using CryptoTrader.EntityDomain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CryptoTrader.EntityFramework
 {
     public class ApplicationDbContext : DbContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
 
@@ -16,5 +14,10 @@ namespace CryptoTrader.EntityFramework
          * Registrate the entities here into DbContext
          * For example: DbSet<ExampleEntity> ExampleEntities { get; set; }
         */
+
+        public DbSet<User> Users { get; set; }
+        public DbSet<Currency> Currencies { get; set; }
+        public DbSet<CurrencyUser> CurrencyUsers { get; set; }
+        public DbSet<Trade> Trades { get; set; }
     }
 }

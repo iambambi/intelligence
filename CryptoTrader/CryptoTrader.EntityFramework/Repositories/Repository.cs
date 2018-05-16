@@ -23,6 +23,7 @@ namespace CryptoTrader.EntityFramework.Repositories
             if (entity == null)
                 throw new EntityNotFoundException<T>(entity.Id);
 
+            entity.CreatedOn = DateTime.Now;
             Context.Set<T>().Attach(entity);
             Context.Set<T>().Add(entity);
 

@@ -9,12 +9,18 @@
   <ItemGroup>
     <None Remove="angular-app\src\app\app.configuration.ts" />
     <None Remove="angular-app\src\app\models\apiresponse.ts" />
+    <None Remove="angular-app\src\app\models\currency.ts" />
     <None Remove="angular-app\src\app\models\purchase.ts" />
+    <None Remove="angular-app\src\app\models\trade.ts" />
+    <None Remove="angular-app\src\app\models\tradeTypes.ts" />
+    <None Remove="angular-app\src\app\models\user.ts" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.6" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.2" />
+    <PackageReference Include="AutoMapper" Version="6.2.2" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="2.0.3" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,7 +32,6 @@
     <Folder Include="angular-app\src\app\directives\" />
     <Folder Include="angular-app\src\app\guards\" />
     <Folder Include="angular-app\src\app\pipes\" />
-    <Folder Include="Controllers\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,7 +44,11 @@
   <ItemGroup>
     <TypeScriptCompile Include="angular-app\src\app\app.configuration.ts" />
     <TypeScriptCompile Include="angular-app\src\app\models\apiresponse.ts" />
+    <TypeScriptCompile Include="angular-app\src\app\models\currency.ts" />
     <TypeScriptCompile Include="angular-app\src\app\models\purchase.ts" />
+    <TypeScriptCompile Include="angular-app\src\app\models\trade.ts" />
+    <TypeScriptCompile Include="angular-app\src\app\models\tradeTypes.ts" />
+    <TypeScriptCompile Include="angular-app\src\app\models\user.ts" />
   </ItemGroup>
 
 </Project>

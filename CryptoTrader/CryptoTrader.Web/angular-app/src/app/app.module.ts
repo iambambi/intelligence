@@ -8,6 +8,13 @@ import { ChartComponent } from './components/chart/chart.component';
 import { Configuration } from './app.configuration';
 import { ExchangeHandlerComponent } from './components/exchange-handler/exchange-handler.component';
 
+let providers = {
+  "facebook": {
+    "clientId": "246237042779563",
+    "apiVersion": "v2.4"
+  }
+};
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="7.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoTrader.EntityDomain\CryptoTrader.EntityDomain.csproj" />
+  </ItemGroup>
+
 </Project>
