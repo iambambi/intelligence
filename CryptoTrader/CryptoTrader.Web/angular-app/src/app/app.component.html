@@ -30,7 +30,7 @@
         <div class="4u 12u(mobile)">
           <span class="image fit">
             <div>
-              <img class="img-div"/>
+              <img class="img-div" />
             </div>
           </span>
         </div>
@@ -44,16 +44,23 @@
     </article>
   </div>
 
+  <div class="wrapper style2">
+    <article id="work">
+      <header>
+        <h2>Balance History</h2>
+      </header>
+      <app-history></app-history>
+    </article>
+  </div>
+
   <!-- Rates -->
   <div class="wrapper style2">
     <article id="work">
       <header>
         <h2>Current rates</h2>
       </header>
-      <div class="container">
-        <app-chart [cryptoCurrencySym]="'btc'" [cryptoCurrencyName]="'BITCOIN'"></app-chart>
-        <app-chart [cryptoCurrencySym]="'eth'" [cryptoCurrencyName]="'ETHEREUM'"></app-chart>
-        <app-chart [cryptoCurrencySym]="'xrp'" [cryptoCurrencyName]="'XRP'"></app-chart>
+      <div class="container" *ngFor="let currency of currencies">
+        <app-chart [cryptoCurrencySym]="currency.symbol" [cryptoCurrencyName]="currency.name"></app-chart>
       </div>
     </article>
   </div>
@@ -65,7 +72,7 @@
       <header>
         <h2>Crypto currency purchase</h2>
       </header>
-      <div>
+      <div class="exchange-handler">
         <app-exchange-handler></app-exchange-handler>
       </div>
       <footer>

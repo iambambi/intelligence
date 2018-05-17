@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { Response, Http, Headers } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/throw';
+import 'rxjs/Rx';
 
 import { Configuration } from '../app.configuration';
 import { LoggerService } from './logger.service';

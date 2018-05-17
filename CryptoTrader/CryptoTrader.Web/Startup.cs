@@ -39,11 +39,6 @@ namespace CryptoTrader
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<MvcOptions>(options =>
-            {
-                options.Filters.Add(new RequireHttpsAttribute());
-            });
-
             services.AddMvc();
 
             services.AddDbContext<ApplicationDbContext>
@@ -83,21 +78,8 @@ namespace CryptoTrader
                 serviceScope.ServiceProvider.GetService<ApplicationDbContext>().Database.Migrate();
             }
 
-            app.Use(async (context, next) =>
-            {
-                await next();
-                if (context.Response.StatusCode == 404 && !Path.HasExtension(context.Request.Path.Value) && !context.Request.Path.Value.StartsWith("/api/"))
-                {
-                    context.Request.Path = "/index.html";
-                    await next();
-                }
-            });
-
             app.UseDefaultFiles();
             app.UseStaticFiles();
-
-            var options = new RewriteOptions().AddRedirectToHttps(301, 44301);
-            app.UseRewriter(options);
 
             app.UseMvc();
         }

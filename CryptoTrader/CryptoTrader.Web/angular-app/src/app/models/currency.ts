@@ -1,4 +1,5 @@
 export class Currency {
-  public Symbol: string;
-  public Name: string;
+  public symbol: string;
+  public amount: number;
+  public name: string;
 }

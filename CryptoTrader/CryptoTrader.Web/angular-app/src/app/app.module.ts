@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { Configuration } from './app.configuration';
 import { ExchangeHandlerComponent } from './components/exchange-handler/exchange-handler.component';
+import { LoggerService } from './services/logger.service';
+import { DataService } from './services/data.service';
+import { HistoryComponent } from './components/history/history.component';
 
 let providers = {
   "facebook": {
@@ -19,7 +22,8 @@ let providers = {
   declarations: [
     AppComponent,
     ChartComponent,
-    ExchangeHandlerComponent
+    ExchangeHandlerComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,9 @@ let providers = {
   ],
   providers: [
     Configuration,
-    CryptoService
+    LoggerService,
+    CryptoService,
+    DataService
   ],
   bootstrap: [AppComponent]
 })

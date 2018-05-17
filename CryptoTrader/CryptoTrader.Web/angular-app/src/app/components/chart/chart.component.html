@@ -1,6 +1,12 @@
-<header>
-  <h3>{{cryptoCurrencyName}} <span class="badge badge-secondary">$ {{actualPrice}}</span></h3>
-</header>
-<div *ngIf="chart">
-  <canvas [id]="cryptoCurrencySym">{{ chart }}</canvas>
+
+<div *ngIf="cryptoCurrencySym != 'USD'">
+  <header>
+    <h3 *ngIf="cryptoCurrencyName">{{cryptoCurrencyName}} <span *ngIf="actualPrice" class="badge badge-secondary">$ {{actualPrice}}</span></h3>
+  </header>
+  <div *ngIf="chart && isValidChart">
+    <canvas [id]="cryptoCurrencySym">{{ chart }}</canvas>
+  </div>
+  <div *ngIf="!isValidChart">
+    <h4 class="label label-default">Content is not found!</h4>
+  </div>
 </div>

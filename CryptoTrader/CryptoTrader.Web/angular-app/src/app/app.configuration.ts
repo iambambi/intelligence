@@ -17,6 +17,7 @@ export class Configuration {
   public CryptoPurchaseUrl = "https://obudai-api.azurewebsites.net/api/account/purchase";
   public CryptoResetUrl = "https://obudai-api.azurewebsites.net/api/account/reset";
   public CryptoAccountUrl = "https://obudai-api.azurewebsites.net/api/account";
+  public CryptoHistoryUrl = "https://obudai-api.azurewebsites.net/api/account/history";
 
   public FacebookTokenValidatorUrl = "https://graph.facebook.com/v2.4/me/?access_token=";
 

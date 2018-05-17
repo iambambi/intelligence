@@ -1,0 +1,11 @@
+<div>
+  <header>
+    <h3>ASD</h3>
+  </header>
+  <div *ngIf="isValidChart">
+    <canvas id="history">{{ chart }}</canvas>
+  </div>
+  <div *ngIf="!isValidChart">
+    <h4 class="label label-default">Content is not found!</h4>
+  </div>
+</div>

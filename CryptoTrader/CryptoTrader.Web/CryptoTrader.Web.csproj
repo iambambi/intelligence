@@ -10,7 +10,8 @@
     <None Remove="angular-app\src\app\app.configuration.ts" />
     <None Remove="angular-app\src\app\models\apiresponse.ts" />
     <None Remove="angular-app\src\app\models\currency.ts" />
-    <None Remove="angular-app\src\app\models\purchase.ts" />
+    <None Remove="angular-app\src\app\models\ExchangeObj.ts" />
+    <None Remove="angular-app\src\app\models\historyObj.ts" />
     <None Remove="angular-app\src\app\models\trade.ts" />
     <None Remove="angular-app\src\app\models\tradeTypes.ts" />
     <None Remove="angular-app\src\app\models\user.ts" />
@@ -45,7 +46,8 @@
     <TypeScriptCompile Include="angular-app\src\app\app.configuration.ts" />
     <TypeScriptCompile Include="angular-app\src\app\models\apiresponse.ts" />
     <TypeScriptCompile Include="angular-app\src\app\models\currency.ts" />
-    <TypeScriptCompile Include="angular-app\src\app\models\purchase.ts" />
+    <TypeScriptCompile Include="angular-app\src\app\models\exchangeObj.ts" />
+    <TypeScriptCompile Include="angular-app\src\app\models\historyObj.ts" />
     <TypeScriptCompile Include="angular-app\src\app\models\trade.ts" />
     <TypeScriptCompile Include="angular-app\src\app\models\tradeTypes.ts" />
     <TypeScriptCompile Include="angular-app\src\app\models\user.ts" />
