@@ -31,9 +31,9 @@ namespace CryptoTrader.Services.Implementations
         /// Creates the specified entity
         /// </summary>
         /// <param name="entity">The entity.</param>
-        public virtual Task<T> Create(T entity)
+        public virtual async Task<T> Create(T entity)
         {
-            return Repository.Create(entity);
+            return await Repository.Create(entity);
         }
 
         /// <summary>
@@ -41,26 +41,26 @@ namespace CryptoTrader.Services.Implementations
         /// </summary>
         /// <param name="entity">The entity.</param>
         /// <returns></returns>
-        public virtual Task Delete(T entity)
+        public virtual async Task Delete(T entity)
         {
-            return Repository.Delete(entity);
+            await Repository.Delete(entity);
         }
 
         /// <summary>
         /// Determines whether T entity exists with given identifier
         /// </summary>
-        public virtual Task<bool> Exists(Guid id)
+        public virtual async Task<bool> Exists(Guid id)
         {
-            return Repository.Exists(id);
+            return await Repository.Exists(id);
         }
 
         /// <summary>
         /// Gets all entities on the DbTable
         /// </summary>
         /// <param name="filter">The optional filter parameter (lambda).</param>
-        public virtual Task<IEnumerable<T>> GetAll()
+        public virtual async Task<IEnumerable<T>> GetAll()
         {
-            return Repository.GetAll();
+            return await Repository.GetAll();
         }
 
         /// <summary>

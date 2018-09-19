@@ -1,16 +1,15 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace CryptoTrader.EntityDomain
 {
     public abstract class Entity : IEntity
     {
-        private DateTime createdOn = DateTime.Now;
-        public DateTime CreatedOn { get => createdOn; set => createdOn = value; }
+        [Key]
+        public Guid Id { get; set; }
 
-        private DateTime? updatedOn = null;
-        public DateTime? UpdatedOn { get => updatedOn; set => updatedOn = value; }
+        public DateTime CreatedOn { get; set; }
 
-        private Guid id = new Guid();
-        public Guid Id { get => id; set => id = value; }
+        public DateTime? UpdatedOn { get; set; }
     }
 }

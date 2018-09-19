@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.Tests", "Crypt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoTrader.Web", "CryptoTrader.Web\CryptoTrader.Web.csproj", "{4C424FC2-2535-4B8E-8717-B332264ADC9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutoTrader", "AutoTrader\AutoTrader.csproj", "{14173514-E0B1-499A-B23A-C94D3B8E2E4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{4C424FC2-2535-4B8E-8717-B332264ADC9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C424FC2-2535-4B8E-8717-B332264ADC9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C424FC2-2535-4B8E-8717-B332264ADC9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14173514-E0B1-499A-B23A-C94D3B8E2E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14173514-E0B1-499A-B23A-C94D3B8E2E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14173514-E0B1-499A-B23A-C94D3B8E2E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14173514-E0B1-499A-B23A-C94D3B8E2E4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
