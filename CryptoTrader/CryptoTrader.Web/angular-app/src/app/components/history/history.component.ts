@@ -16,12 +16,13 @@ export class HistoryComponent implements OnInit {
   public chart: any = [];
   public actualPrice: number;
   public isValidChart: boolean = true;
+  public historyChart: string = "historyChart";
 
   constructor(private _cryptoService: CryptoService) { }
 
   private dateFormat(date: string): void {
     let _temp = new Date(date);
-    date = _temp.toLocaleTimeString("hu-HU");
+    date = _temp.toLocaleDateString("hu-HU");
   }
 
   ngOnInit() {
@@ -36,68 +37,70 @@ export class HistoryComponent implements OnInit {
           return false;
         }
 
-        let dates: string[] = new Array<string>();
-        for (var i = 0; i < obj.length; i++) {
-          // Collect dates
-          let _dateTemp: string = obj[i].createdAt;
-          this.dateFormat(_dateTemp);
-          dates.push(_dateTemp);
-        }
-        // Sort dates
-        dates = dates.sort();
-
         let labels: string[] = new Array<string>();
-
-        // Collect hourly labels
-        for (var i = 1; i < dates.length; i++) {
-          let _currentDate = new Date(dates[i]);
-          let _nextDate = new Date(dates[i++]);
-          if ((_currentDate.getDay() == _nextDate.getDay()) && (_currentDate.getHours() == _nextDate.getHours())) {
-            this.dateFormat(dates[i]);
-            labels.push(dates[i]);
-          }
-        }
 
         let btc: number[] = new Array<number>();
         let eth: number[] = new Array<number>();
         let usd: number[] = new Array<number>();
         let xrp: number[] = new Array<number>();
-         // TODO Implement this
-        let idx: number = 0;
-        //while (idx < dates.length) {
-        //  let left = new Date(labels[i]);
-        //  let right = new Date(labels[i]);
-        //  if (obj.) {
-        //  }
 
-        
-        this.chart = new Chart("history", {
-          type: 'line',
-          data: {
-            //labels: dates,
-            datasets: [
-              {
-                //data: prices,
-                borderColor: '#3cba9f',
-                fill: false
-              },
+        for (var i = 0; i < obj.length; i++) {
+          let _dateTemp: string = obj[i].createdAt;
+          this.dateFormat(_dateTemp);
+          labels.push(_dateTemp);
 
-            ]
-          },
-          options: {
-            legend: {
-              display: false
+          btc.push(obj[i].balance["btc"] ? obj[i].balance["btc"] : 0);
+          eth.push(obj[i].balance["eth"] ? obj[i].balance["eth"] : 0);
+          usd.push(obj[i].balance["usd"]) ? obj[i].balance["usd"] : 0;
+          xrp.push(obj[i].balance["xrp"]) ? obj[i].balance["xrp"] : 0;
+        }
+
+        if (labels) {
+          this.chart = new Chart(this.historyChart, {
+            type: 'line',
+            data: {
+              labels: labels,
+              datasets: [
+                {
+                  data: btc,
+                  borderColor: '#3cba9f',
+                  fill: false
+                },
+                {
+                  data: eth,
+                  borderColor: '#092850',
+                  fill: false
+                },
+                {
+                  data: usd,
+                  borderColor: '#10983b',
+                  fill: false
+                },
+                {
+                  data: xrp,
+                  borderColor: '#971098',
+                  fill: false
+                },
+              ]
             },
-            scales: {
-              xAxes: [{
-                display: true
-              }],
-              yAxes: [{
-                display: true
-              }]
+            options: {
+              legend: {
+                display: false
+              },
+              scales: {
+                xAxes: [{
+                  display: true
+                }],
+                yAxes: [{
+                  display: true
+                }]
+              }
             }
-          }
-        });
+          });
+        }
+        else {
+          this.isValidChart = false;
+        }
       },
       err => {
         console.log("API error - History");

@@ -1,9 +1,9 @@
-<div>
+<div class="row">
   <header>
-    <h3>ASD</h3>
+    <h3>Activity</h3>
   </header>
   <div *ngIf="isValidChart">
-    <canvas id="history">{{ chart }}</canvas>
+    <canvas [id]="historyChart">{{ chart }}</canvas>
   </div>
   <div *ngIf="!isValidChart">
     <h4 class="label label-default">Content is not found!</h4>

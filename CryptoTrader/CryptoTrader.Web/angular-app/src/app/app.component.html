@@ -17,6 +17,7 @@
   <nav id="nav">
     <ul class="container">
       <li><a href="#top">Top</a></li>
+      <li><a href="#history">History</a></li>
       <li><a href="#work">Rates</a></li>
       <li><a href="#purchase">Purchase</a></li>
       <li></li>
@@ -45,11 +46,13 @@
   </div>
 
   <div class="wrapper style2">
-    <article id="work">
+    <article id="history">
       <header>
         <h2>Balance History</h2>
       </header>
-      <app-history></app-history>
+      <div class="container">
+        <app-history></app-history>
+      </div>
     </article>
   </div>
 
@@ -72,7 +75,7 @@
       <header>
         <h2>Crypto currency purchase</h2>
       </header>
-      <div class="exchange-handler">
+      <div class="exchange-handler" style="display:flex; justify-content:center;">
         <app-exchange-handler></app-exchange-handler>
       </div>
       <footer>

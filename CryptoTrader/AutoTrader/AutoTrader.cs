@@ -23,9 +23,26 @@ namespace AutoTrader
             // GET: HttpHelpers.GetAsync(URI); => return string
             // POST: HttpHelpers.PostAsync("URI","data","type","POST"); => return string
 
-            // TODO: SELL-BUY LOGIC
+            //List<DateTime> listtoday = new List<DateTime>();
+            //foreach (var item in historydates)
+            //{
+            //    if (item = DateTime.Now)
+            //    {
+            //        listtoday.Add(item);
+            //    }
+            //}
 
-            log.Info($"C# Timer trigger function executed at: {DateTime.Now}");
+            //var avg = listtoday.value.Avarge();
+            //if (avg < currentPrice)
+            //{
+            //    Buy(0, 1);
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+        log.Info($"C# Timer trigger function executed at: {DateTime.Now}");
         }
     }
 }
